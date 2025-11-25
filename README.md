@@ -1,16 +1,39 @@
-# counter_pro_plus
+# **Counter Pro Plus App**
 
-A new Flutter project.
+A beginner-friendly Flutter application that builds on the classic counter example.
+This version includes improved UI structure, cleaner state updates, and a more modular layout to help students understand real-world project organization in Flutter.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## **How to Download and Use**
 
-A few resources to get you started if this is your first Flutter project:
+### **1. Clone this repository**
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+```bash
+git clone https://github.com/TheFlutterSensei/Counter-Pro-Plus-App.git
+cd Counter-Pro-Plus-App
+```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### **2. Install dependencies**
+
+```bash
+flutter pub get
+```
+
+### **3. Run the app**
+
+```bash
+flutter run
+```
+
+---
+
+## **Where to Learn?**
+
+### **Full Learning Path & Tutorials**
+
+[https://fluttersensei.com](https://fluttersensei.com)
+
+### **Complete Step-By-Step Class on Skillshare**
+
+[Skillshare Class](https://skl.sh/47oCTqM)
