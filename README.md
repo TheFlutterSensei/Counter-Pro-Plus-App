@@ -1,35 +1,18 @@
-# **Counter Pro Plus App**
+### Counter Pro+ App
 
-A beginner-friendly Flutter application that builds on the classic counter example.
-This version includes improved UI structure, cleaner state updates, and a more modular layout to help students understand real-world project organization in Flutter.
+A professional upgraded Flutter counter app.
+Learn advanced Flutter concepts while building features like themes, state persistence, and animations.
+Perfect for learners ready to go beyond the basics.
 
----
+Steps to use the app:
+1. Clone the repo
+2. Run ```flutter pub get```
+3. Run ```flutter run```
+4. Try the counter buttons, theme toggle, and UI features
 
-## **How to Download and Use**
+### Upgrade Your Flutter Skills
 
-### **1. Clone this repository**
+This mini class teaches better state management, UI design, and Flutter best practices.
+Build a polished, real-world app while strengthening core Flutter knowledge.
 
-```bash
-git clone https://github.com/TheFlutterSensei/Counter-Pro-Plus-App.git
-cd Counter-Pro-Plus-App
-```
-
-### **2. Install dependencies**
-
-```bash
-flutter pub get
-```
-
-### **3. Run the app**
-
-```bash
-flutter run
-```
-
----
-
-## **Where to Learn?**
-
-### **Full Learning Path & Tutorials**
-
-[https://fluttersensei.com](https://fluttersensei.com)
+https://courses.fluttersensei.com/l/flutter-counter-upgraded
