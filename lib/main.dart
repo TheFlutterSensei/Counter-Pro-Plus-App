@@ -1,48 +1,41 @@
+// Importing necessary packages
 import 'package:flutter/material.dart';
 
+// Main entry point of the application
 void main() {
-  runApp(const CounterProPlus());
+  runApp(const MyApp());
 }
 
-class CounterProPlus extends StatelessWidget {
-  const CounterProPlus({super.key});
+// The main application widget
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Counter Pro Plus',
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.purple),
-      home: const CounterHomeScreen(),
+      title: 'Counter App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const CounterScreen(),
     );
   }
 }
 
-class CounterHomeScreen extends StatefulWidget {
-  const CounterHomeScreen({super.key});
+// Screen that contains the counter logic
+class CounterScreen extends StatefulWidget {
+  const CounterScreen({Key? key}) : super(key: key);
 
   @override
-  State<CounterHomeScreen> createState() => _CounterState();
+  _CounterScreenState createState() => _CounterScreenState();
 }
 
-class _CounterState extends State<CounterHomeScreen> {
-  int _count = 0;
+class _CounterScreenState extends State<CounterScreen> {
+  int _counter = 0;
 
-  void _increment() {
+  void _incrementCounter() {
     setState(() {
-      _count++;
-    });
-  }
-
-  void _decrement() {
-    setState(() {
-      _count--;
-    });
-  }
-
-  void _reset() {
-    setState(() {
-      _count = 0;
+      _counter++;
     });
   }
 
@@ -50,51 +43,26 @@ class _CounterState extends State<CounterHomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Counter Pro+'),
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        foregroundColor: Theme.of(context).colorScheme.onPrimary,
+        title: const Text('Counter'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              'Your counter:',
-              style: Theme.of(context).textTheme.titleMedium,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
             ),
             Text(
-              '$_count',
-              style: TextStyle(
-                fontSize: 80,
-                color: Theme.of(context).colorScheme.primary,
-              ),
-            ),
-            SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ElevatedButton.icon(
-                  onPressed: _decrement,
-                  label: Text('Decrement'),
-                  icon: Icon(Icons.remove),
-                ),
-                SizedBox(width: 5),
-                ElevatedButton.icon(
-                  onPressed: _reset,
-                  label: Text('Reset'),
-                  icon: Icon(Icons.refresh),
-                ),
-                SizedBox(width: 5),
-                ElevatedButton.icon(
-                  onPressed: _increment,
-                  label: Text('Increment'),
-                  icon: Icon(Icons.add),
-                ),
-              ],
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
             ),
           ],
         ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
       ),
     );
   }
